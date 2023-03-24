@@ -19,9 +19,8 @@ public class GameController : SingletonComponent<GameController>
     public GameObject BulletParent { get => bulletParent; set => bulletParent = value; }
     public GameObject EnemyParent { get => enemyParent; set => enemyParent = value; }
 
-    protected override void Awake()
+    private void Start()
     {
-        base.Awake();
         LoadLevel();
     }
 
