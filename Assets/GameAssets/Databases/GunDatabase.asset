@@ -14,14 +14,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunDatas:
   - range: 10
-    damage: 10
-    attackSpeed: 3
+    damage: 5
+    attackSpeed: 2
     bulletSpeed: 5
   - range: 11
-    damage: 15
-    attackSpeed: 4
+    damage: 6
+    attackSpeed: 3
     bulletSpeed: 5
   - range: 12
-    damage: 20
-    attackSpeed: 5
+    damage: 7
+    attackSpeed: 4
     bulletSpeed: 5
+  - range: 13
+    damage: 8
+    attackSpeed: 5
+    bulletSpeed: 6
+  - range: 14
+    damage: 9
+    attackSpeed: 6
+    bulletSpeed: 7
+  - range: 15
+    damage: 10
+    attackSpeed: 7
+    bulletSpeed: 8
+  - range: 15
+    damage: 12
+    attackSpeed: 8
+    bulletSpeed: 9
+  - range: 15
+    damage: 15
+    attackSpeed: 9
+    bulletSpeed: 10
+  - range: 15
+    damage: 18
+    attackSpeed: 9
+    bulletSpeed: 10
+  - range: 15
+    damage: 20
+    attackSpeed: 9
+    bulletSpeed: 10

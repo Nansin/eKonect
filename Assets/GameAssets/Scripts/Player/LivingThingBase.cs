@@ -7,15 +7,14 @@ public class LivingThingBase : MonoBehaviour
     protected GameController gameController;
     protected int hp;
 
+    private bool isDie;
+
+    public bool IsDie { get => isDie; set => isDie = value; }
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         gameController = GameController.Instance;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

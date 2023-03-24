@@ -19,7 +19,7 @@ public class Gun : MonoBehaviour
 
     private void Awake()
     {
-        InitGun(1);
+        InitGun(Prefs.LevelGun);
     }
 
     // Start is called before the first frame update
