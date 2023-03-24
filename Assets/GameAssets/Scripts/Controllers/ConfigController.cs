@@ -2,17 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ConfigController : MonoBehaviour
+public class ConfigController : SingletonComponent<ConfigController>
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] private PlayerDatabase playerDatabase;
+    [SerializeField] private GunDatabase gunDatabase;
+    public PlayerDatabase PlayerDatabase { get => playerDatabase; private set => playerDatabase = value; }
+    public GunDatabase GunDatabase { get => gunDatabase; private set => gunDatabase = value; }
 }

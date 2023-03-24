@@ -84,11 +84,10 @@ public class JoyStickController : MonoBehaviour
                 joystick.transform.position = joystickTouchPos + joystickVec * (joystickBackgroundRadius - joystickRadius);
             }
 
-            float speed = Vector2.Distance(joystick.transform.position, joystickTouchPos) / (joystickBackgroundRadius - joystickRadius);
             Vector2 direction = (Vector2)joystick.transform.position - joystickTouchPos;
             direction = direction / joystickBackgroundRadius;
 
-            player.Move(speed, direction);
+            player.Move(direction);
 
             StopAllCoroutines();
         }

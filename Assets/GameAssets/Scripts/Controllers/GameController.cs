@@ -2,17 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameController : MonoBehaviour
+public class GameController : SingletonComponent<GameController>
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject bulletParent;
+    [SerializeField] private GameObject enemyParent;
+    private List<Enemy> listEnemies = new List<Enemy>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public List<Enemy> ListEnemies { get => listEnemies; set => listEnemies = value; }
+    public GameObject BulletParent { get => bulletParent; set => bulletParent = value; }
+    public GameObject EnemyParent { get => enemyParent; set => enemyParent = value; }
+
 }
