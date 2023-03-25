@@ -43,11 +43,6 @@ public class Gun : MonoBehaviour
             fireCountdown = 0;
         }
     }
-
-    private void InitGun(int playerLevel)
-    {
-        gunData = ConfigController.Instance.GunDatabase.gunDatas[playerLevel];
-    }    
     private void SetEndRangePosition(float range)
     {
         Vector3 firePointShadow = new Vector3(transform.position.x, 0, transform.position.z);
@@ -79,5 +74,10 @@ public class Gun : MonoBehaviour
             bullet.transform.SetParent(GameController.Instance.BulletParent.transform);
             bullet.GetComponent<Bullet>().InitBullet(gunData.bulletSpeed, gunData.damage, EndBulletPoint.position);
         }
+    }
+
+    public void InitGun(int playerLevel)
+    {
+        gunData = ConfigController.Instance.GunDatabase.gunDatas[playerLevel];
     }
 }

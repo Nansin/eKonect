@@ -30,6 +30,7 @@ public class UIController : SingletonComponent<UIController>
         Prefs.LevelGun++;
         Prefs.LevelGun = Prefs.LevelGun > ConfigController.Instance.GunDatabase.gunDatas.Count - 1 ? ConfigController.Instance.GunDatabase.gunDatas.Count - 1 : Prefs.LevelGun;
         UpdateTextLevelGun();
+        PlayerController.Instance.Gun.InitGun(Prefs.LevelGun);
     }
 
     public void UpdateTextLevelGun()

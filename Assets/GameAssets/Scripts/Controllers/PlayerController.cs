@@ -45,6 +45,7 @@ public class PlayerController : LivingThingBase
 
     public bool AllowMove { get => allowMove; set => allowMove = value; }
     public PlayerState PlayerState { get => playerState; set => playerState = value; }
+    public Gun Gun { get => gun; set => gun = value; }
 
 
     #region private method
