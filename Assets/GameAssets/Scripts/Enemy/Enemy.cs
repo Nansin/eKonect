@@ -15,7 +15,7 @@ public class Enemy : LivingThingBase
         if (hp < 1)
         {
             IsDie = true;
-            gameController.RemoveEnemy(this);
+            gameController.RemoveEnemy(this.gameObject);
             SimplePool.Instance.Despawn(this.gameObject);
         }
     }

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: PlayerDatabase
   m_EditorClassIdentifier: 
   hp: 20
-  range: 7
+  range: 5
   movementSpeed: 3
   rotationSpeed: 50

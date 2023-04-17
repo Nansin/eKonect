@@ -137,7 +137,7 @@ public class PlayerController : LivingThingBase
             return;
         }
 
-        Collider[] listEnemy = Physics.OverlapSphere(transform.position, /*playerData.weaponData.range*/5f, 1 << 7);
+        Collider[] listEnemy = Physics.OverlapSphere(transform.position, playerData.range, 1 << 7);
 
         bool canShoot = false;
 

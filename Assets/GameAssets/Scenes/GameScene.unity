@@ -636,6 +636,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
+    - target: {fileID: 1500396632661063231, guid: 318c0220c854b814da17451945e6f72d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 318c0220c854b814da17451945e6f72d, type: 3}
 --- !u!1001 &1914913292556900360
