@@ -10,12 +10,12 @@ public class GameController : SingletonComponent<GameController>
     [SerializeField] private GameObject enemyParent;
     [SerializeField] private LevelController levelController;
 
-    private List<Enemy> listEnemies = new List<Enemy>();
+    private List<GameObject> listEnemies = new List<GameObject>();
     private LevelData levelData;
     private List<int> listCountSpawn = new List<int>();
     private int wave;
 
-    public List<Enemy> ListEnemies { get => listEnemies; set => listEnemies = value; }
+    public List<GameObject> ListEnemies { get => listEnemies; set => listEnemies = value; }
     public GameObject BulletParent { get => bulletParent; set => bulletParent = value; }
     public GameObject EnemyParent { get => enemyParent; set => enemyParent = value; }
 
@@ -44,12 +44,15 @@ public class GameController : SingletonComponent<GameController>
             Vector3 pos = levelController.ListsSpawn[idSpawn].position;
             listCountSpawn.Add(idSpawn);
             GameObject enemy = SimplePool.Instance.Spawn(prefabEnemy, pos, Quaternion.identity);
+            enemy.transform.SetParent(enemyParent.transform);
             enemy.GetComponent<Enemy>().InitEnemy(wave);
-            listEnemies.Add(enemy.GetComponent<Enemy>());
+            listEnemies.Add(enemy);
+            StaticBatchingUtility.Combine(enemy);
         }
+
     }
 
-    public void RemoveEnemy(Enemy enemy)
+    public void RemoveEnemy(GameObject enemy)
     {
         listEnemies.Remove(enemy);
         if (listEnemies.Count == 0)
